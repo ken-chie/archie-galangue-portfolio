@@ -60,14 +60,15 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-const { $gsap, $ScrollTrigger, $ScrollSmoother } = useNuxtApp()
+const { $gsap, $ScrollTrigger } = useNuxtApp()
+// const { $gsap, $ScrollTrigger, $ScrollSmoother } = useNuxtApp()
 
 const header = ref(false)
 const smooth = ref(null)
 
 onMounted(() => {
   header.value = true
-  smooth.value = $ScrollSmoother.create({ smooth: 1, effects: true, smoothTouch: 0.1, })
+  // smooth.value = $ScrollSmoother.create({ smooth: 1, effects: true, smoothTouch: 0.1, })
   $gsap.fromTo('.scroll-trigger-header', { y: -100, opacity: 0 }, { y: 0, duration: 0.7, opacity: 1 })
 })
 
