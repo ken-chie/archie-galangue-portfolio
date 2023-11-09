@@ -18,8 +18,9 @@
                       </p>
                     </div>
                     <a
-                      href="#?"
-                      class="block text-center w-full mt-6 md:mt-12 text-white text-xl font-medium shadow-lg shadow-teal-400/50 bg-gradient-to-r from-teal-400 to-yellow-200 hover:from-emerald-400 hover:to-cyan-400 focus:ring-4 focus:ring-blue-300 rounded-full px-8 py-4"
+                      href="https://apes.cash/"
+                      target="blank_"
+                      class="block text-center w-full mt-6 md:mt-12 text-white text-xl font-medium shadow-lg shadow-teal-400/50 bg-gradient-to-r from-teal-400 to-yellow-200 hover:from-emerald-400 hover:to-cyan-400 rounded-full px-8 py-4"
                     >
                       Live Preview
                     </a>
@@ -42,8 +43,9 @@
                       <p class="text-slate-400">Spice token is all about recognition and showing appreciation. Hence, we launched this NFT series to recognize exceptional artistic talents and provide a new venue where their artwork can be appreciated and patronized.</p>
                     </div>
                     <a
-                      href="#?"
-                      class="block text-center w-full mt-6 md:mt-12 text-white text-xl font-medium shadow-lg shadow-teal-400/50 bg-gradient-to-r from-teal-400 to-yellow-200 hover:from-emerald-400 hover:to-cyan-400 focus:ring-4 focus:ring-blue-300 rounded-full px-8 py-4"
+                      href="https://spicenft.art/"
+                      target="blank_"
+                      class="block text-center w-full mt-6 md:mt-12 text-white text-xl font-medium shadow-lg shadow-teal-400/50 bg-gradient-to-r from-teal-400 to-yellow-200 hover:from-emerald-400 hover:to-cyan-400 rounded-full px-8 py-4"
                     >
                       Live Preview
                     </a>
