@@ -35,11 +35,11 @@
               <div class="atropos-inner">
                 <div class="rounded-3xl bg-gradient-to-r from-teal-400 to-yellow-200 p-[1px]">
                   <div class="rounded-[24px] h-full bg-gray-800 back p-8">
-                    <img src="~/assets/projects/ape-bets.png" alt="ApeBets">
-                    <p class="text-xl md:text-3xl font-semibold my-4 text-white">Ape Bets.cash</p>
+                    <img src="~/assets/projects/spice-nft-series.png" alt="ApeBets">
+                    <p class="text-xl md:text-3xl font-semibold my-4 text-white">Spice NFT Series</p>
 
                     <div class="block h-28">
-                      <p class="text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <p class="text-slate-400">Spice token is all about recognition and showing appreciation. Hence, we launched this NFT series to recognize exceptional artistic talents and provide a new venue where their artwork can be appreciated and patronized.</p>
                     </div>
                     <a
                       href="#?"
