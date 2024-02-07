@@ -29,6 +29,7 @@
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",
     "pinia": "^2.1.7",
+    "ufo": "^1.4.0",
     "vue-tippy": "^6.3.1"
   },
   "overrides": {
