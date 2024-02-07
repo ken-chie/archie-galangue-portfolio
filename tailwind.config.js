@@ -3,7 +3,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
   content: [
     `./components/**/*.{vue,js,ts}`,
     `./layouts/**/*.vue`,
@@ -15,7 +17,8 @@ module.exports = {
     `./app.{js,ts,vue}`,
     `./Error.{js,ts,vue}`,
     `./error.{js,ts,vue}`,
-    `./app.config.{js,ts}`
+    `./app.config.{js,ts}`,
+    `./node_modules/flowbite/**/*.{js,ts}`
   ]
 }
 
