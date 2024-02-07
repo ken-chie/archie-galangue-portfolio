@@ -3,102 +3,49 @@
     <div id="technology" class="mx-auto max-w-screen-lg pt-2 lg:pt-0">
       <p class="text-2xl md:text-5xl text-white font-semibold my-6 md:my-12">Technologies</p>
       <div class="scroll-trigger-tech">
-        <div class="block mb-8 scroll-trigger-tech-1">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">HTML5</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 90%"
-            />
+        <template v-for="(tech, index) in technologies" :key="index">
+          <div class="block mb-8" :class="`scroll-trigger-tech-${index+1}`">
+            <p class="text-white text-lg md:text-xl font-semibold mb-3">{{ tech.name }}</p>
+            <div class="w-full bg-gray-200 rounded-full bg-gray-700">
+              <div
+                class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
+                :style="{ width: tech.percent }"
+              />
+            </div>
           </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-2">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Bootstrap & Tailwind CSS</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 90%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-3">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">CSS3, SCSS & Sass</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 90%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-4">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Javascript (ES6), Typescript, JQuery</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 80%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-5">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Axios, AJAX</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 90%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-6">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Vue.js, Nuxt 3, Quasar</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 85%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-7">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Vuex & Pinia</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 95%"
-            />
-          </div>
-        </div>
-        <div class="block mb-8 scroll-trigger-tech-8">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">Django, Django Rest Framework</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 80%"
-            />
-          </div>
-        </div>
-        <div class="block scroll-trigger-tech-9">
-          <p class="text-white text-lg md:text-xl font-semibold mb-3">SQL, MySQL, PostgreSQL</p>
-          <div class="w-full bg-gray-200 rounded-full bg-gray-700">
-            <div
-              class="bg-gradient-to-r from-teal-400 to-yellow-200 text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
-              style="width: 80%"
-            />
-          </div>
-        </div>
+        </template>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
-import { onMounted } from "vue"
+<script setup lang="ts">
 const { $gsap, $ScrollTrigger } = useNuxtApp()
+
+const technologies = ref([
+  { name: 'HTML5', percent: '90%', x: -150 },
+  { name: 'Bootstrap & Tailwind CSS', percent: '90%', x: 150 },
+  { name: 'CSS3, SCSS & Sass', percent: '90%', x: -150 },
+  { name: 'Javascript (ES6), Typescript, JQuery', percent: '80%', x: 150 },
+  { name: 'Axios, AJAX', percent: '90%', x: -150 },
+  { name: 'Vue.js, Nuxt 3, Quasar', percent: '85%', x: 150 },
+  { name: 'Vuex & Pinia', percent: '95%', x: -150 },
+  { name: 'React.js, Next.js', percent: '25%', x: 150 },
+  { name: 'Django, Django Rest Framework', percent: '80%', x: -150 },
+  { name: 'SQL, MySQL, PostgreSQL', percent: '80%', x: 150 },
+])
 
 onMounted(() => {
   gsapEffects()
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      gsapEffects()
+    }
+  })
 })
 
 const gsapEffects = () => {
-  
   const tween = $gsap.fromTo(".scroll-trigger-tech", { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
   const st = $ScrollTrigger.create({
     trigger: ".scroll-trigger-tech",
@@ -114,21 +61,16 @@ const gsapEffects = () => {
     animation: tween,
   })
   st.animation
-  
-  const tl = $gsap.timeline()
-  const tween2 = tl.fromTo(".scroll-trigger-tech-1", { x: -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-2", { x: 150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-3", { x: -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-4", { x: 150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-5", { x: -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-6", { x: 150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-7", { x: -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-8", { x: 150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
-      .fromTo(".scroll-trigger-tech-9", { x: -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 })
+
+  const tl = $gsap.timeline({ repeatRefresh: true })
+  for (let key in technologies.value) {
+    tl.fromTo(`.scroll-trigger-tech-${key}`, { x: (parseInt(key, 10) % 2) == 1 ? 150 : -150, opacity: 0 }, { x: 0, duration: 0.5, opacity: 1 }) 
+  }
+  const tween2 = tl
   const st2 = $ScrollTrigger.create({
     trigger: ".scroll-trigger-tech-1",
-    start: "top bottom",
-    end: "+=600",
+    // start: "top bottom",
+    // end: "+=600",
     snap: {
       snapTo: "labels",
       duration: { min: 0.2, max: 3 },
