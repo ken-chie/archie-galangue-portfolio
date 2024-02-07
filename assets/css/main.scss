@@ -1,36 +1,54 @@
 
-.loader {
-  display: block;
-  width: 84px;
-  height: 84px;
-  position: relative;
-}
+// .loader {
+//   display: block;
+//   width: 84px;
+//   height: 84px;
+//   position: relative;
+// }
 
-.loader:before , .loader:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #aecc00;
-  transform: translate(-50% , -100%)  scale(0);
-  animation: push_401 2s infinite linear;
-}
+// .loader:before , .loader:after {
+//   content: "";
+//   position: absolute;
+//   left: 50%;
+//   bottom: 0;
+//   width: 64px;
+//   height: 64px;
+//   border-radius: 50%;
+//   background: #aecc00;
+//   transform: translate(-50% , -100%)  scale(0);
+//   animation: push_401 2s infinite linear;
+// }
 
-.loader:after {
-  animation-delay: 1s;
-}
+// .loader:after {
+//   animation-delay: 1s;
+// }
 
-@keyframes push_401 {
-  0% , 50% {
-    transform: translate(-50% , 0%)  scale(1)
-  }
+// @keyframes push_401 {
+//   0% , 50% {
+//     transform: translate(-50% , 0%)  scale(1)
+//   }
 
-  100% {
-    transform: translate(-50%, -100%) scale(0)
-  }
-}
+//   100% {
+//     transform: translate(-50%, -100%) scale(0)
+//   }
+// }
 
-@import 'atropos/scss'
+// Custom css style for vue-tippy
+// .tippy-box[data-theme~='tomato'] {
+//   background-color: tomato !important;
+//   color: white;
+// }
+
+
+@import 'atropos/scss';
+@import 'tippy.js/dist/tippy.css';
+// @import 'tippy.js/dist/backdrop.css';
+
+// Need to individually imported based on what animation/theme you will use
+@import 'tippy.js/animations/scale.css';
+@import 'tippy.js/animations/shift-away.css';
+// @import 'tippy.js/animations/scale-subtle.css';
+// @import 'tippy.js/animations/scale-extreme.css';
+// @import 'tippy.js/themes/light-border.css';
+// @import 'tippy.js/themes/material.css';
+@import 'tippy.js/themes/translucent.css';

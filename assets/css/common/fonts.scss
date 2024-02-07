@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'Open Sans Regular';
-  src: url('~/assets/fonts/static/OpenSans-Regular.ttf') format('truetype');
+  src: url('/fonts/static/OpenSans-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Medium';
-  src: url('~/assets/fonts/static/OpenSans-Medium.ttf') format('truetype');
+  src: url('/fonts/static/OpenSans-Medium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Open Sans Bold';
-  src: url('~/assets/fonts/static/OpenSans-Bold.ttf') format('truetype');
+  src: url('/fonts/static/OpenSans-Bold.ttf') format('truetype');
 }
 .p-font-regular {
   font-family: Open Sans Regular;
