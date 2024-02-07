@@ -50,7 +50,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { $gsap, $ScrollTrigger } = useNuxtApp()
 const experience = ref([
   {
