@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-amber-700">
+  <div class="w-full md:w-screen">
     <slot />
   </div>
 </template>
