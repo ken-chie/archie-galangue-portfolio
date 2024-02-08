@@ -11,12 +11,6 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/png', href: "/favicon.ico" }]
     }
   },
-  runtimeConfig: {
-    apiBase: process.env.BASE_URL,
-    public: {
-      apiBase: process.env.BASE_URL
-    }
-  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt'
