@@ -254,7 +254,7 @@ const projects = ref([
     name: 'iKonek Klesia',
     img: 'ikonek',
     description: 'Explore the profound connection between faith and the digital age with discussions centered around the innovative Ikonek app. Delve into the intersection of religion and modernity, as we navigate the impact of technology on religious practices, community building, and spiritual experiences.',
-    techStack: [ 'Nuxt', 'Django Rest Framework' ],
+    techStack: [ 'Quasar', 'Django Rest Framework' ],
     anchors: [
       { name: 'google-play-store', link: 'https://play.google.com/store/apps/details?id=cash.purelypeer.app&hl=en&gl=US' },
     ]
