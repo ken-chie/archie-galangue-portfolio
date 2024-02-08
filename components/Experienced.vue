@@ -4,7 +4,7 @@
       <p class="text-2xl md:text-5xl text-white font-semibold my-6 md:my-12">Work Experience</p>
       <div class="block scroll-trigger-work-experience">
         <ol class="hidden sm:flex">
-          <template v-for="(exp, index) in experience" :key="index">
+          <template v-for="(exp, i) in experience" :key="(i as number)">
             <li class="relative mb-6 sm:mb-0 basis-1/3">
               <div class="flex items-center">
                 <div class="z-10 flex items-center justify-center w-6 h-6 bg-gradient-to-r from-teal-400 to-yellow-200 rounded-full ring-0 sm:ring-8 ring-gray-700 shrink-0">
@@ -28,7 +28,7 @@
         </ol>
 
         <ol class="block md:hidden relative border-l border-gray-200 dark:border-gray-700">                  
-          <template v-for="(exp, index) in experience" :key="index">
+          <template v-for="(exp, ii) in experience" :key="(ii as number)">
             <li class="mb-10 ml-6">
               <span class="absolute flex items-center justify-center w-6 h-6 bg-gradient-to-r from-teal-400 to-yellow-200 rounded-full -left-3 ring-8 ring-gray-900 dark:ring-gray-900 dark:bg-blue-900">
                   <svg class="w-2.5 h-2.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">

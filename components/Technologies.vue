@@ -3,8 +3,8 @@
     <div id="technology" class="mx-auto max-w-screen-lg pt-2 lg:pt-0">
       <p class="text-2xl md:text-5xl text-white font-semibold my-6 md:my-12">Technologies</p>
       <div class="scroll-trigger-tech">
-        <template v-for="(tech, index) in technologies" :key="index">
-          <div class="block mb-8" :class="`scroll-trigger-tech-${index+1}`">
+        <template v-for="(tech, i) in technologies" :key="(i as number)">
+          <div class="block mb-8" :class="`scroll-trigger-tech-${(i as number)++}`">
             <p class="text-white text-lg md:text-xl font-semibold mb-3">{{ tech.name }}</p>
             <div class="w-full bg-gray-200 rounded-full bg-gray-700">
               <div
@@ -26,7 +26,8 @@ const technologies = ref([
   { name: 'HTML5', percent: '90%', x: -150 },
   { name: 'Bootstrap & Tailwind CSS', percent: '90%', x: 150 },
   { name: 'CSS3, SCSS & Sass', percent: '90%', x: -150 },
-  { name: 'Javascript (ES6), Typescript, JQuery', percent: '80%', x: 150 },
+  { name: 'Javascript (ES6), JQuery', percent: '80%', x: 150 },
+  { name: 'Typescript', percent: '70%', x: 150 },
   { name: 'Axios, AJAX', percent: '90%', x: -150 },
   { name: 'Vue.js, Nuxt 3, Quasar', percent: '85%', x: 150 },
   { name: 'Vuex & Pinia', percent: '95%', x: -150 },

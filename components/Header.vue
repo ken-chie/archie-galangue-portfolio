@@ -7,7 +7,7 @@
         </a>
         <div class="flex lg:basis-1/3 md:basis-1/4 sm:basis-full shrink gap-5 md:gap-3 md:order-2 w-auto justify-end">
           <ClientOnly>
-            <template v-for="(social, index) in socialLinks" :key="index">
+            <template v-for="(social, i) in socialLinks" :key="(i as number)">
               <a :href="social.link" target="_blank" class="text-2xl text-gray-200 hover:text-white transition">
                 <!-- <font-awesome-layers> -->
                 <font-awesome-icon :icon="['fab', social.icon]" />
@@ -18,7 +18,7 @@
         </div>
         <div class="flex lg:basis-1/3 md:basis-1/2 sm:basis-full justify-between items-center shrink w-full md:w-auto md:order-1 pt-0 lg:px-0 md:px-4 sm:md:px-7">
           <ul class="flex mt-4 font-normal justify-between flex-row space-x-8 md:mt-0 w-full">
-            <template v-for="(nav, index) in navLinks" :key="index">
+            <template v-for="(nav, ii) in navLinks" :key="(ii as number)">
               <li>
                 <a
                   href="#"

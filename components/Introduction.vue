@@ -46,7 +46,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { $gsap } = useNuxtApp()
 
 const intro = ref(false)

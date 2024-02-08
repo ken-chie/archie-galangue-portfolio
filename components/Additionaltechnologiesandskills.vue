@@ -4,8 +4,8 @@
       <p class="text-2xl md:text-5xl text-white font-semibold my-6 md:my-12">Additional technologies and skills</p>
       <div class="block">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 scroll-trigger-add-tech">
-          <template v-for="(tech, index) in additionalTech" :key="index">
-            <div class="text-lg md:text-xl text-white inline-flex gap-2 items-baseline font-semibold" :class="`gsap-add-tech-${index++}`">
+          <template v-for="(tech, index) in additionalTech" :key="(index as number)">
+            <div class="text-lg md:text-xl text-white inline-flex gap-2 items-baseline font-semibold" :class="`gsap-add-tech-${(index as number)++}`">
               <span class="w-3 h-3 bg-gradient-to-r from-teal-400 to-yellow-200 rounded-full"></span>
               {{ tech }}
             </div>
@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { $gsap, $ScrollTrigger } = useNuxtApp()
 
 const additionalTech = ref([

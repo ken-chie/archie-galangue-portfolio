@@ -37,7 +37,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const socialLinks = ref([
   { link: 'https://www.facebook.com/8.chiee', icon: 'facebook' },
   { link: 'https://www.linkedin.com/in/archie-galangue-81ba89141/', icon: 'linkedin' },

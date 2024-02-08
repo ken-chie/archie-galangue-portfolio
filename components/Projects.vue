@@ -4,8 +4,8 @@
       <p class="text-2xl md:text-5xl text-white font-semibold my-6 md:my-12">Projects</p>
       <!-- <p class="text-white font-semibold my-6 md:my-12">{{ token }}</p> -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto max-w-screen-lg scroll-trigger-project">
-        <template v-for="(project, index) in projects" :key="index">
-          <div :class="`atropos my-project-${index++}`">
+        <template v-for="(project, i) in projects" :key="(i as number)">
+          <div :class="`atropos my-project-${(i as number)++}`">
             <div class="atropos-scale">
               <div class="atropos-rotate">
                 <div class="atropos-inner py-1">
@@ -23,15 +23,15 @@
                         <p class="text-xl text-white">Tech stack</p>
                         <p class="text-slate-400">
                           {
-                            <template v-for="(tech, index) in project.techStack" :key="index">
-                              {{ (index === (project.techStack.length-1) ? `${tech}` : `${tech}, `) }}
+                            <template v-for="(tech, ii) in project.techStack" :key="(ii as number)">
+                              {{ ((ii as number) === (project.techStack.length-1) ? `${tech}` : `${tech}, `) }}
                             </template>
                           }
                         </p>
                       </div>
                       <hr class="h-0.5 w-32 border-t-0 bg-slate-400 opacity-100 dark:opacity-50 mb-6 md:mb-7 mt-6 md:mt-8 rounded-full mx-auto" />
                       <div class="flex flex-wrap gap-3 justify-center">
-                        <template v-for="(anchor, i) in project.anchors" :key="i">
+                        <template v-for="(anchor, iii) in project.anchors" :key="(iii as number)">
                           <template v-if="anchor.name === 'web'">
                             <a
                               ref="website"
@@ -184,19 +184,17 @@
   </div>
 </template>
 
-<script setup>
-// import Atropos from "atropos"
+<script setup lang="ts">
 import { Tippy } from 'vue-tippy'
 import { useTippy } from 'vue-tippy'
 import { useImagesStore } from '@/stores/images'
-// import { userAccountStore } from '@/stores/account'
 
 const imageStore = useImagesStore()
-const images = ref(null)
+const images: Ref<{ [key: string]: any } | null> = ref(null)
 
 /* Use vue-tippy */
-const website = ref(null)
-const telegram = ref(null)
+const website: Ref<any> = ref(undefined)
+const telegram: Ref<any> = ref(undefined)
 useTippy(website, { content: 'Website', theme: 'translucent', animation: 'scale', animateFill: true })
 useTippy(telegram, { content: 'Telegram', theme: 'translucent', animation: 'scale', animateFill: true })
 /**/
@@ -265,41 +263,10 @@ const projects = ref([
 
 const { $gsap } = useNuxtApp()
 
-/**
- * Listen to the reactivity of token with the use of computed
- *
-  const accountStore = userAccountStore()
-  const count = ref(0)
-  const token = computed(() => accountStore.token)
- */
-
 onMounted(() => {
-  // $ScrollSmoother.create({ smooth: 1, effects: true })
-  // atroposEffects()
   gsapEffects()
   images.value = imageStore.images
-
-  /**
-   * Listen to the reactivity of count from store
-   *
-    setInterval(() => {
-      count.value += 1
-      console.log('Count: ', count.value)
-      console.log('Increment: ', increment.value)
-    }, 2000)
-   */
 })
-
-// const atroposEffects = () => {
-//   for (let key in projects.value) {
-//     Atropos({
-//       el: `.my-project-${key}`,
-//       activeOffset: 40,
-//       rotate: false,
-//       shadow: false
-//     })
-//   }
-// }
 
 const gsapEffects = () => {
   $gsap.fromTo('.scroll-trigger-project', { y: 100, opacity: 0 }, {
