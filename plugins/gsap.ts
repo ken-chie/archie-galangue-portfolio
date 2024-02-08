@@ -21,7 +21,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     provide: {
       gsap,
       ScrollTrigger,
-      ScrollSmoother,
+      // ScrollSmoother,
       ScrollToPlugin
     }
   }
