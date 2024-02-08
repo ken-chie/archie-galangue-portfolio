@@ -17,7 +17,7 @@
           software developer
         </p>
         <p class="text-slate-400 text-lg my-6 md:my-12 opacity-0 gsap-intro" :class="{ 'opacity-100': intro }">
-          Experienced software developer specializing Vue.js, particularly Nuxt.js and Quasar,
+          Experienced software developer specializing Vue.js, particularly Nuxt and Quasar,
           with a strong proficiency in CSS frameworks including Bootstrap and Tailwind CSS.
           Skilled in integrating front-end technologies with backend services,
           with a focus on utilizing Django Rest Frameworks for efficient communication between client and server.
