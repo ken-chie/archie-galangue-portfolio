@@ -66,7 +66,7 @@ const experience = ref([
   {
     company: 'Scibiz Informatics',
     years: 'January 2020 - present',
-    description: 'Develop stable and fault-tolerant software, mainly on the frontend. Implement UI/UX design and deliver asssigned task based on requirement specifications.'
+    description: 'Develop stable and fault-tolerant software, mainly on the frontend. Implement UI/UX design and deliver assigned task based on requirement specifications.'
   }
 ])
 
