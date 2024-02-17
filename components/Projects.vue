@@ -227,7 +227,7 @@ const projects = ref([
                   Bitcoin Cash (BCH) is best positioned to become peer-to-peer electronic cash for world.\
                   We built the wallet that makes BCH useful for the masses --\
                   the next billion users we will onboard to crypto for its actual utility',
-    techStack: [ 'Quasar', 'Django Rest Framework' ],
+    techStack: [ 'Nuxt 3', 'Quasar', 'Django Rest Framework' ],
     anchors: [
       { name: 'web', link: 'https://paytaca.com/' },
       { name: 'google-play-store', link: 'https://play.google.com/store/apps/details?id=com.paytaca.app' },
@@ -242,7 +242,7 @@ const projects = ref([
     name: 'PureplyPeer',
     img: 'purelypeer',
     description: 'Discover the thrill of quest hunting with PurelyPeer. The ultimate decentralized wallet for modern quest hunters! Earn Bitcoin Cash and dominate the virtual world like never before!',
-    techStack: [ 'Quasar', 'Django Rest Framework' ],
+    techStack: [ 'Nuxt 3', 'Quasar', 'Django Rest Framework' ],
     anchors: [
       { name: 'web', link: 'https://purelypeer.cash/' },
       { name: 'google-play-store', link: 'https://play.google.com/store/apps/details?id=cash.purelypeer.app&hl=en&gl=US' },
