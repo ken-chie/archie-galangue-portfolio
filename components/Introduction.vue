@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 md:px-7 lg:px-6 w-full pt-0 lg:pt-20">
+  <div class="px-6 md:px-7 lg:px-6 pt-0 lg:pt-20">
     <div class="grid grid-cols-12 mx-auto max-w-screen-lg headline">
       <div class="col-span-12 text-justify md:text-left md:col-span-9 pt-6 md:pt-20">
         <p
@@ -17,7 +17,7 @@
           software developer
         </p>
         <p class="text-slate-400 text-lg my-6 md:my-12 opacity-0 gsap-intro" :class="{ 'opacity-100': intro }">
-          Experienced software developer specializing Vue.js, particularly Nuxt and Quasar,
+          Experienced software developer specializing Vue.js, particularly Nuxt and Quasar frameworks,
           with a strong proficiency in CSS frameworks including Bootstrap and Tailwind CSS.
           Skilled in integrating front-end technologies with backend services,
           with a focus on utilizing Django Rest Frameworks for efficient communication between client and server.
