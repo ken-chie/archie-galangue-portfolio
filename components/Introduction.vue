@@ -64,8 +64,8 @@ onMounted(() => {
 
 const downloadCV = () => {
   const link = document.createElement('a')
-  link.href = '/curiculum-vitae/Archie-Galangue-Curiculum-Vitae.pdf'
-  link.download = 'Archie-Galangue-Curiculum-Vitae.pdf'
+  link.href = '/curriculum-vitae/Archie-Galangue-Curiculum-Vitae.pdf'
+  link.download = 'Archie-Galangue-Curriculum-Vitae.pdf'
   link.target = '_blank'
   link.click()
 }
